@@ -1,4 +1,17 @@
+body{
 
+   background-color: black;
+   color:white;
+}
+.list{
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+.header{
+    text-align: center;
+    background-color: black;
+}
 
 
 

@@ -5,6 +5,10 @@ import CharacterList from './CharacterList';
 import Filter from './Filter';
 import { Switch, Route } from 'react-router-dom';
 import CharacterDetail from './CharacterDetail';
+import Header from './Header';
+
+
+
 
 
 
@@ -15,6 +19,7 @@ class App extends React.Component {
             allCharacters: [],
             value: '',
             id: '',
+
         }
 
         this.handleOnChange = this.handleOnChange.bind(this);
@@ -31,24 +36,39 @@ class App extends React.Component {
             })
     }
 
+
     handleOnChange(searching) {
         this.setState({ value: searching })
 
     }
+
+
+
     renderDetail(props) {
-        console.log(props)
-        console.log(props.match.params.id)
-        console.log(this.state.allCharacters)
+
         const routeId = props.match.params.id;
-        const character = this.state.allCharacters.find(character => character.id === routeId);
-        console.log(character)
-        {
-            character === undefined ? 'Loading' : <CharacterDetail character={character} />
+        console.log(routeId)
+
+        const characters = this.state.allCharacters
+        for (let character of characters) {
+            console.log(character.id)
+            if (character.id == routeId) {
+                return (
+                    <CharacterDetail character={character} />)
+            }
+
+            else {
+                console.log('nosedequemehablas')
+            }
         }
     }
+
+
+
     render() {
         return (
             <div>
+                <Header />
                 <Switch>
                     <Route exact path="/">
                         <Filter
@@ -59,9 +79,9 @@ class App extends React.Component {
                             characters={this.state.allCharacters}
                             searching={this.state.value} />
                     </Route>
-                    <Route path="/characterList/:id" render={this.renderDetail} />
+                    <Route path="/character/:id" render={this.renderDetail} />
                 </Switch>
-            </div>
+            </div >
         )
     }
 }

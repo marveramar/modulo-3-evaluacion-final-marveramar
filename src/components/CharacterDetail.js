@@ -1,10 +1,10 @@
 import React from 'react';
 const CharacterDetail = (props) => {
     console.log(props)
-
     const { name, species, image, status, origin, episode } = props.character
+
     return (
-        <div>
+        <div className="detail">
 
             <h2>{name}</h2>
             <p>{species}</p>
@@ -15,6 +15,8 @@ const CharacterDetail = (props) => {
 
         </div>
     )
-
 }
+
+
+
 export default CharacterDetail;

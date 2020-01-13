@@ -5,7 +5,7 @@ const CharacterCard = (props) => {
     const { name, species, image } = props.character
 
     return (
-        <div>
+        <div className="card" >
             <h3>{name}</h3>
             <p>{species}</p>
             <img src={image} alt={name} />
