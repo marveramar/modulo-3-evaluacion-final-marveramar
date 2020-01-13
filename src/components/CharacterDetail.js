@@ -1,17 +1,18 @@
 import React from 'react';
 const CharacterDetail = (props) => {
-    console.log(props)
+
     const { name, species, image, status, origin, episode } = props.character
 
     return (
         <div className="detail">
-
-            <h2>{name}</h2>
-            <p>{species}</p>
-            <p>{origin.name}</p>
-            <p>{episode.length}</p>
-            <p>{status}</p>
-            <img src={image} alt={name} />
+            <div className="description">
+                <h2>{name}</h2>
+                <p>Specie: {species}</p>
+                <p>Origin: {origin.name}</p>
+                <p>Number of episodes: {episode.length}</p>
+                <p>Status: {status}</p>
+            </div>
+            <img className="img-detail" src={image} alt={name} />
 
         </div>
     )

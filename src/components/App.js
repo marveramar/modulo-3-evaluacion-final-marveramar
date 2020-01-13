@@ -47,11 +47,9 @@ class App extends React.Component {
     renderDetail(props) {
 
         const routeId = props.match.params.id;
-        console.log(routeId)
-
         const characters = this.state.allCharacters
         for (let character of characters) {
-            console.log(character.id)
+
             if (character.id == routeId) {
                 return (
                     <CharacterDetail character={character} />)
