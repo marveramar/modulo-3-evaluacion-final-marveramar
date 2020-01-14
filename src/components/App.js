@@ -37,9 +37,6 @@ class App extends React.Component {
                 return (
                     <CharacterDetail character={character} />)
             }
-            else {
-                console.log('error, not found')
-            }
         }
     }
     render() {
