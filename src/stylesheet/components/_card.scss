@@ -1,0 +1,18 @@
+.card{
+    margin:auto;
+    margin-bottom:8px;
+    background-color:$color_rick;
+    color:$color_morty;
+    text-decoration: none;
+    text-decoration-line: none;
+    padding:15px;
+    max-width: 70%;
+    font-family: $font_acme;
+    @include tablet{
+        font-size:$font_size_tablet;
+    }
+    .card__img{
+        padding:5px;
+        width: 100%;
+    }
+}

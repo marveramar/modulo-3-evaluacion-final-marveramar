@@ -1,0 +1,9 @@
+
+.list{
+    display:flex;
+    flex-wrap: wrap;
+    margin:auto;
+    @include desktop{  
+       justify-content:space-around;
+    }
+}

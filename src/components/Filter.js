@@ -12,8 +12,8 @@ class Filter extends React.Component {
     render() {
         return (
             <form className="form" >
-                <label className="label" htmlFor="inputSearch">Search</label>
-                <input className="input" name="inputSearch" type="text" className="input" value={this.props.value} onChange={this.handleOnChange} />
+                <label className="form__label" htmlFor="inputSearch">Search</label>
+                <input className="form__input" name="inputSearch" type="text" value={this.props.value} onChange={this.handleOnChange} />
 
             </form>
         )

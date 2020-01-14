@@ -1,0 +1,21 @@
+.form{
+    text-align: center;
+    color: 	$color_morty;
+    padding-bottom: 20px;
+    margin:auto;
+    .form__label{
+        padding:5px;
+        @include tablet{
+            font-size:25px;
+        }
+    }
+    .form__input{
+        border: 3px solid $color_morty;
+        border-radius: 15px;
+        padding:5px;
+        max-width: 150px;
+        @include tablet{
+            min-width: 300px;
+        }
+    }
+}

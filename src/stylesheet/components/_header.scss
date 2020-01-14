@@ -1,0 +1,16 @@
+.header{
+    text-align: center;
+    background-color: black;
+    margin:auto;
+    margin-bottom:15px; 
+    margin-top:10px; 
+    width:100vw;     
+    .header__img{
+        max-width: 250px;
+        margin:auto;
+        display:block;
+        @include tablet{
+            max-width:500px;
+        }
+    }
+}  

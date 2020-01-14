@@ -1,0 +1,36 @@
+.detail{
+    display:flex;
+    flex-direction: column;    
+    background-color: $color_rick;
+    color: black;
+    text-align: center;
+    margin: auto;
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-around;
+        margin:25px;
+    }  
+    @include desktop{
+    max-width:900px;
+       margin:auto;
+       margin-top:25px;
+    }
+}
+.detail__description{
+    flex-direction: column;
+    padding: 15px;
+    line-height: 1.5;
+    font-family:$font_acme;
+    @include tablet{
+        line-height: 2;
+        align-items: center;
+    }
+}
+.detail__img{
+    padding:8px; 
+}
+.back{
+    border: 1px solid $color_morty;
+    color:$color_morty;
+    padding:5px;
+}
