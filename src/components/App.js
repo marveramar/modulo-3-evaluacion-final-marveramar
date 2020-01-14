@@ -7,11 +7,6 @@ import { Switch, Route } from 'react-router-dom';
 import CharacterDetail from './CharacterDetail';
 import Header from './Header';
 
-
-
-
-
-
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -19,33 +14,21 @@ class App extends React.Component {
             allCharacters: [],
             value: '',
             id: '',
-
         }
-
         this.handleOnChange = this.handleOnChange.bind(this);
         this.renderDetail = this.renderDetail.bind(this);
-
-
-
     }
     componentDidMount() {
         ApiFetch()
             .then(data => {
-                console.log(data)
                 this.setState({ allCharacters: data.results })
             })
     }
-
-
     handleOnChange(searching) {
         this.setState({ value: searching })
 
     }
-
-
-
     renderDetail(props) {
-
         const routeId = props.match.params.id;
         const characters = this.state.allCharacters
         for (let character of characters) {
@@ -54,15 +37,11 @@ class App extends React.Component {
                 return (
                     <CharacterDetail character={character} />)
             }
-
             else {
-                console.log('nosedequemehablas')
+                console.log('error, not found')
             }
         }
     }
-
-
-
     render() {
         return (
             <div className="main">

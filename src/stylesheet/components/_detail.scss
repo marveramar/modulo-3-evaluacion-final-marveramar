@@ -5,10 +5,16 @@
     color: black;
     text-align: center;
     margin: auto;
+    max-width: 300px;
+    margin-top: 20px;
+
     @include tablet{
         flex-direction: row;
         justify-content: space-around;
         margin:25px;
+        max-width: 500px;
+        margin:auto;
+        margin-top:25px;
     }  
     @include desktop{
     max-width:900px;
@@ -28,6 +34,9 @@
 }
 .detail__img{
     padding:8px; 
+}
+.detail__name{
+    text-transform: uppercase;
 }
 .back{
     border: 1px solid $color_morty;

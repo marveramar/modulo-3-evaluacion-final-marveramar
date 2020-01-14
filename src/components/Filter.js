@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 class Filter extends React.Component {
     constructor(props) {
         super(props);
@@ -18,6 +20,9 @@ class Filter extends React.Component {
             </form>
         )
     }
+}
+Filter.propTypes = {
+    value: PropTypes.string,
 }
 
 export default Filter;
